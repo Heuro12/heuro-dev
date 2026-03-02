@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Development - Heuro</title>
+    <title>Red Team & Security - Heuro</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
- 
+    
     <canvas id="matrix-canvas"></canvas>
 
-  
+   
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -23,8 +23,8 @@
             </div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">HOME</a>
-                <a href="redteam.html" class="nav-link">RED TEAM</a>
-                <a href="backend.html" class="nav-link active">BACKEND</a>
+                <a href="redteam.html" class="nav-link active">RED TEAM</a>
+                <a href="backend.html" class="nav-link">BACKEND</a>
                 <a href="#contact" class="nav-link nav-cta">CONTATO</a>
             </div>
             <div class="nav-toggle">
@@ -39,264 +39,196 @@
     <section class="page-hero">
         <div class="container">
             <div class="page-hero-content">
-                <span class="page-tag">// BACKEND ENGINEERING</span>
+                <span class="page-tag">// OFFENSIVE SECURITY</span>
                 <h1 class="page-title">
-                    <span class="title-gradient">APIS ROBUSTAS</span>
-                    <span>& ARQUITETURA ESCALÁVEL</span>
+                    <span class="title-gradient">RED TEAM</span>
+                    <span>& PENETRATION TESTING</span>
                 </h1>
                 <p class="page-subtitle">
-                    Código limpo. Performance otimizada. Arquitetura que escala.<br>
-                    Do MVP ao sistema enterprise, eu entrego soluções que funcionam.
+                    Penso como um atacante. Defendo como um especialista.<br>
+                    Identifico vulnerabilidades antes que sejam exploradas.
                 </p>
             </div>
         </div>
     </section>
 
-    
-    <section class="tech-stack">
+    <section class="methodology">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// TECNOLOGIAS</span>
-                <h2 class="section-title">STACK PRINCIPAL</h2>
+                <span class="section-tag">// PROCESSO</span>
+                <h2 class="section-title">METODOLOGIA DE ATAQUE</h2>
             </div>
-            <div class="stack-showcase">
-                <div class="stack-category">
-                    <h3 class="stack-title">Backend Frameworks</h3>
-                    <div class="stack-items">
-                        <div class="stack-item featured">
-                            <div class="stack-icon"></div>
-                            <h4>FastAPI</h4>
-                            <p>Framework moderno e rápido para APIs REST. Documentação automática, validação de dados e alta performance.</p>
-                        </div>
-                        <div class="stack-item">
-                            <div class="stack-icon">️</div>
-                            <h4>Flask</h4>
-                            <p>Microframework flexível para aplicações web e APIs. Ideal para projetos de médio porte.</p>
-                        </div>
+            <div class="methodology-grid">
+                <div class="method-card">
+                    <div class="method-number">01</div>
+                    <h3 class="method-title">RECONNAISSANCE</h3>
+                    <p class="method-description">
+                        Coleta passiva e ativa de informações sobre o alvo. 
+                        OSINT, enumeração de domínios, identificação de tecnologias e superfície de ataque.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Nmap</span>
+                        <span class="tool-badge">theHarvester</span>
+                        <span class="tool-badge">Shodan</span>
                     </div>
                 </div>
 
-                <div class="stack-category">
-                    <h3 class="stack-title">Databases & ORMs</h3>
-                    <div class="stack-items">
-                        <div class="stack-item">
-                            <div class="stack-icon"></div>
-                            <h4>PostgreSQL</h4>
-                            <p>Banco relacional robusto com suporte a JSON, full-text search e recursos avançados.</p>
-                        </div>
-                        <div class="stack-item">
-                            <div class="stack-icon">️</div>
-                            <h4>SQLAlchemy</h4>
-                            <p>ORM poderoso com suporte a queries complexas, migrations e relacionamentos.</p>
-                        </div>
-                        <div class="stack-item">
-                            <div class="stack-icon"></div>
-                            <h4>Redis</h4>
-                            <p>Cache em memória para sessões, filas de tarefas e dados temporários de alta velocidade.</p>
-                        </div>
+                <div class="method-card">
+                    <div class="method-number">02</div>
+                    <h3 class="method-title">SCANNING & ENUMERATION</h3>
+                    <p class="method-description">
+                        Varredura de portas, serviços e versões. Identificação de vulnerabilidades 
+                        conhecidas e pontos fracos na infraestrutura.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Nmap</span>
+                        <span class="tool-badge">Nessus</span>
+                        <span class="tool-badge">Nikto</span>
                     </div>
                 </div>
 
-                <div class="stack-category">
-                    <h3 class="stack-title">DevOps & Infrastructure</h3>
-                    <div class="stack-items">
-                        <div class="stack-item">
-                            <div class="stack-icon"></div>
-                            <h4>Docker</h4>
-                            <p>Containerização para ambientes consistentes e deploy simplificado.</p>
-                        </div>
-                        <div class="stack-item">
-                            <div class="stack-icon"></div>
-                            <h4>CI/CD</h4>
-                            <p>Pipelines automatizados para testes, build e deploy contínuo.</p>
-                        </div>
-                        <div class="stack-item">
-                            <div class="stack-icon"></div>
-                            <h4>Nginx</h4>
-                            <p>Reverse proxy e load balancer para alta disponibilidade.</p>
-                        </div>
+                <div class="method-card">
+                    <div class="method-number">03</div>
+                    <h3 class="method-title">VULNERABILITY ANALYSIS</h3>
+                    <p class="method-description">
+                        Análise profunda de vulnerabilidades encontradas. Priorização baseada em risco, 
+                        impacto e exploitabilidade real.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Burp Suite</span>
+                        <span class="tool-badge">OWASP ZAP</span>
+                        <span class="tool-badge">SQLMap</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">04</div>
+                    <h3 class="method-title">EXPLOITATION</h3>
+                    <p class="method-description">
+                        Exploração controlada de vulnerabilidades críticas. Demonstração de impacto real 
+                        com prova de conceito ética.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Metasploit</span>
+                        <span class="tool-badge">Custom Exploits</span>
+                        <span class="tool-badge">Social Engineering</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">05</div>
+                    <h3 class="method-title">POST-EXPLOITATION</h3>
+                    <p class="method-description">
+                        Escalação de privilégios, movimento lateral, persistência e exfiltração de dados. 
+                        Simulação realista de ataque APT.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Mimikatz</span>
+                        <span class="tool-badge">PowerShell</span>
+                        <span class="tool-badge">Pivoting</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">06</div>
+                    <h3 class="method-title">REPORTING</h3>
+                    <p class="method-description">
+                        Relatório técnico detalhado com todas as vulnerabilidades encontradas, 
+                        evidências de exploração e recomendações de correção priorizadas.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Executive Summary</span>
+                        <span class="tool-badge">Technical Details</span>
+                        <span class="tool-badge">Remediation</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  
-    <section class="fastapi-showcase">
+
+    <section class="arsenal">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// FASTAPI IN ACTION</span>
-                <h2 class="section-title">APIS DE NÍVEL ENTERPRISE</h2>
+                <span class="section-tag">// FERRAMENTAS</span>
+                <h2 class="section-title">ARSENAL DE SEGURANÇA OFENSIVA</h2>
             </div>
-            <div class="showcase-grid">
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="fastapi-swagger.png" alt="FastAPI Swagger Documentation">
+            <div class="arsenal-grid">
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="kali-terminal.png" alt="Kali Linux Terminal">
                     </div>
-                    <div class="showcase-content">
-                        <h3 class="showcase-title">Documentação Automática Interativa</h3>
-                        <p class="showcase-description">
-                            FastAPI gera automaticamente documentação Swagger UI e ReDoc. 
-                            Teste todos os endpoints diretamente no navegador com validação em tempo real.
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Kali Linux</h3>
+                        <p class="arsenal-description">
+                            Sistema operacional base para pentesting com centenas de ferramentas 
+                            pré-instaladas. Customizado para máxima eficiência.
                         </p>
-                        <ul class="showcase-features">
-                            <li> OpenAPI Schema automático</li>
-                            <li> Validação de tipos com Pydantic</li>
-                            <li> Suporte a autenticação OAuth2</li>
-                            <li> Versionamento de API</li>
-                        </ul>
                     </div>
                 </div>
 
-                <div class="showcase-card reverse">
-                    <div class="showcase-image">
-                        <img src="api-performance.png" alt="API Performance Metrics">
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="burpsuite-scan.png" alt="Burp Suite Scan">
                     </div>
-                    <div class="showcase-content">
-                        <h3 class="showcase-title">Performance Excepcional</h3>
-                        <p class="showcase-description">
-                            APIs otimizadas com resposta em milissegundos. Async/await nativo, 
-                            connection pooling e caching estratégico para máxima eficiência.
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Burp Suite Professional</h3>
+                        <p class="arsenal-description">
+                            Proxy interceptador para análise de aplicações web. Scanner automatizado 
+                            e extensões customizadas para testes avançados.
                         </p>
-                        <ul class="showcase-features">
-                            <li> Async/Await com asyncio</li>
-                            <li> Database connection pooling</li>
-                            <li> Redis caching layer</li>
-                            <li> Rate limiting & throttling</li>
-                        </ul>
                     </div>
                 </div>
 
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="code-snippet.png" alt="Clean Code Example">
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="nmap-results.png" alt="Nmap Scan Results">
                     </div>
-                    <div class="showcase-content">
-                        <h3 class="showcase-title">Código Limpo & Manutenível</h3>
-                        <p class="showcase-description">
-                            Arquitetura em camadas (Controller, Service, Repository), 
-                            dependency injection, testes automatizados e type hints completos.
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Nmap & Network Scanning</h3>
+                        <p class="arsenal-description">
+                            Varredura de rede profunda com scripts NSE customizados. 
+                            Descoberta de serviços, versões e configurações inseguras.
                         </p>
-                        <ul class="showcase-features">
-                            <li> Clean Architecture principles</li>
-                            <li> SOLID design patterns</li>
-                            <li> 100% type coverage</li>
-                            <li> Unit & integration tests</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="architecture">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">// ARQUITETURA</span>
-                <h2 class="section-title">DESIGN DE SISTEMAS ESCALÁVEIS</h2>
-            </div>
-            <div class="architecture-content">
-                <div class="architecture-diagram">
-                    <img src="architecture-diagram.png" alt="System Architecture Diagram">
-                </div>
-                <div class="architecture-info">
-                    <h3 class="architecture-title">Arquitetura em Camadas</h3>
-                    <div class="architecture-layers">
-                        <div class="layer-card">
-                            <h4 class="layer-title">API Layer</h4>
-                            <p class="layer-description">
-                                Endpoints REST com validação de dados, autenticação JWT, 
-                                rate limiting e versionamento.
-                            </p>
-                        </div>
-                        <div class="layer-card">
-                            <h4 class="layer-title">Service Layer</h4>
-                            <p class="layer-description">
-                                Lógica de negócio isolada e testável. Orquestração de operações 
-                                complexas e integração com APIs externas.
-                            </p>
-                        </div>
-                        <div class="layer-card">
-                            <h4 class="layer-title">Repository Layer</h4>
-                            <p class="layer-description">
-                                Abstração do banco de dados. Queries otimizadas, transactions 
-                                e cache de dados frequentemente acessados.
-                            </p>
-                        </div>
-                        <div class="layer-card">
-                            <h4 class="layer-title">Database Layer</h4>
-                            <p class="layer-description">
-                                PostgreSQL com índices otimizados, particionamento de tabelas 
-                                e replicação para alta disponibilidade.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="devops">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">// DEVOPS</span>
-                <h2 class="section-title">DEPLOY & INFRAESTRUTURA</h2>
-            </div>
-            <div class="devops-grid">
-                <div class="devops-card">
-                    <div class="devops-image">
-                        <img src="docker-containers.png" alt="Docker Containers">
-                    </div>
-                    <div class="devops-content">
-                        <h3 class="devops-title">Containerização com Docker</h3>
-                        <p class="devops-description">
-                            Multi-stage builds otimizados, docker-compose para ambientes locais 
-                            e Kubernetes-ready para produção.
-                        </p>
-                        <div class="devops-features">
-                            <span class="feature-badge">Multi-stage Builds</span>
-                            <span class="feature-badge">Docker Compose</span>
-                            <span class="feature-badge">Health Checks</span>
-                            <span class="feature-badge">Volume Management</span>
-                        </div>
                     </div>
                 </div>
 
-                <div class="devops-card">
-                    <div class="devops-image">
-                        <img src="database-schema.png" alt="Database Schema">
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="metasploit-console.png" alt="Metasploit Console">
                     </div>
-                    <div class="devops-content">
-                        <h3 class="devops-title">Database Design & Migrations</h3>
-                        <p class="devops-description">
-                            Schema normalizado, índices estratégicos, migrations versionadas com Alembic 
-                            e backup automatizado.
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Metasploit Framework</h3>
+                        <p class="arsenal-description">
+                            Plataforma de exploração líder mundial. Desenvolvimento de exploits customizados 
+                            e automação de ataques complexos.
                         </p>
-                        <div class="devops-features">
-                            <span class="feature-badge">Alembic Migrations</span>
-                            <span class="feature-badge">Indexing Strategy</span>
-                            <span class="feature-badge">Backup Automation</span>
-                            <span class="feature-badge">Query Optimization</span>
-                        </div>
                     </div>
                 </div>
 
-                <div class="devops-card">
-                    <div class="devops-image">
-                        <img src="postman-tests.png" alt="API Testing">
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="wireshark-traffic.png" alt="Wireshark Network Traffic">
                     </div>
-                    <div class="devops-content">
-                        <h3 class="devops-title">Testing & Quality Assurance</h3>
-                        <p class="devops-description">
-                            Testes unitários, de integração e end-to-end. Coverage reports, 
-                            CI/CD pipelines e testes de carga.
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Wireshark & Traffic Analysis</h3>
+                        <p class="arsenal-description">
+                            Análise profunda de tráfego de rede. Identificação de protocolos inseguros, 
+                            credenciais em texto claro e anomalias.
                         </p>
-                        <div class="devops-features">
-                            <span class="feature-badge">Pytest</span>
-                            <span class="feature-badge">Integration Tests</span>
-                            <span class="feature-badge">Load Testing</span>
-                            <span class="feature-badge">CI/CD Pipeline</span>
-                        </div>
+                    </div>
+                </div>
+
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="vulnerability-report.png" alt="Vulnerability Report">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Custom Tools & Scripts</h3>
+                        <p class="arsenal-description">
+                            Scripts Python customizados para automação de exploits, 
+                            fuzzing e testes específicos não cobertos por ferramentas comerciais.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -304,160 +236,95 @@
     </section>
 
     
-    <section class="services">
+    <section class="expertise-areas">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// SERVIÇOS</span>
-                <h2 class="section-title">O QUE EU DESENVOLVO</h2>
+                <span class="section-tag">// ESPECIALIZAÇÃO</span>
+                <h2 class="section-title">ÁREAS DE EXPERTISE</h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Web Application Security</h3>
+                    <ul class="area-list">
+                        <li>SQL Injection & NoSQL Injection</li>
+                        <li>XSS (Reflected, Stored, DOM-based)</li>
+                        <li>CSRF & Session Management</li>
+                        <li>Authentication & Authorization Bypass</li>
+                        <li>File Upload Vulnerabilities</li>
+                        <li>API Security Testing</li>
+                    </ul>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Network Penetration Testing</h3>
+                    <ul class="area-list">
+                        <li>Network Reconnaissance & Mapping</li>
+                        <li>Port Scanning & Service Enumeration</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>Man-in-the-Middle Attacks</li>
+                        <li>Wireless Network Security</li>
+                        <li>VPN & Firewall Testing</li>
+                    </ul>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
                             <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
                             <line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">REST APIs</h3>
-                    <p class="service-description">
-                        APIs RESTful completas com autenticação, autorização, validação, 
-                        documentação interativa e versionamento.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-                            <line x1="2" y1="12" x2="22" y2="12"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Microservices</h3>
-                    <p class="service-description">
-                        Arquitetura de microsserviços com comunicação via REST/gRPC, 
-                        service discovery e circuit breakers.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="12" y1="18" x2="12" y2="12"/>
-                            <line x1="9" y1="15" x2="15" y2="15"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">CRUD Systems</h3>
-                    <p class="service-description">
-                        Sistemas completos de gerenciamento com autenticação, 
-                        autorização baseada em roles e auditoria de ações.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Authentication Systems</h3>
-                    <p class="service-description">
-                        Sistemas de autenticação seguros com JWT, OAuth2, 
-                        refresh tokens e proteção contra ataques comuns.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Background Jobs</h3>
-                    <p class="service-description">
-                        Processamento assíncrono de tarefas com Celery/RQ, 
-                        agendamento de jobs e monitoramento de falhas.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 010 7.75"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">API Integration</h3>
-                    <p class="service-description">
-                        Integração com APIs externas, webhooks, rate limiting 
-                        e retry logic para requisições resilientes.
-                    </p>
+                    <h3 class="area-title">Social Engineering</h3>
+                    <ul class="area-list">
+                        <li>Phishing Campaign Development</li>
+                        <li>Spear Phishing & Whaling</li>
+                        <li>Physical Security Testing</li>
+                        <li>Employee Awareness Assessment</li>
+                        <li>Pretexting & Vishing</li>
+                        <li>USB Drop Attacks</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="backend-projects">
+    
+    <section class="platforms">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// PROJETOS BACKEND</span>
-                <h2 class="section-title">TRABALHOS ANTERIORES</h2>
+                <span class="section-tag">// CONTINUOUS LEARNING</span>
+                <h2 class="section-title">PLATAFORMAS & CERTIFICAÇÕES</h2>
             </div>
-            <div class="backend-projects-list">
-                <div class="backend-project">
-                    <div class="project-number">01</div>
-                    <div class="project-details">
-                        <h3 class="project-name">Sistema de Autenticação Multi-tenant</h3>
-                        <p class="project-desc">
-                            API completa com suporte a múltiplas organizações, JWT, refresh tokens, 
-                            permissões granulares e auditoria de ações.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">JWT</span>
-                        </div>
-                    </div>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <img src="htb-badge.png" alt="HackTheBox Badge" class="platform-badge">
+                    <h3 class="platform-name">HackTheBox</h3>
+                    <p class="platform-description">
+                        Prática constante em máquinas reais com vulnerabilidades atuais. 
+                        Treinamento em ambiente realista.
+                    </p>
                 </div>
 
-                <div class="backend-project">
-                    <div class="project-number">02</div>
-                    <div class="project-details">
-                        <h3 class="project-name">API de E-commerce com Payment Gateway</h3>
-                        <p class="project-desc">
-                            Plataforma completa com catálogo de produtos, carrinho, checkout, 
-                            integração com gateway de pagamento e sistema de pedidos.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">Stripe API</span>
-                            <span class="tech-tag">Celery</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="backend-project">
-                    <div class="project-number">03</div>
-                    <div class="project-details">
-                        <h3 class="project-name">Microservice de Notificações</h3>
-                        <p class="project-desc">
-                            Serviço dedicado para envio de emails, SMS e push notifications 
-                            com fila de prioridade e retry automático.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">RabbitMQ</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                    </div>
+                <div class="platform-card">
+                    <img src="tryhackme-badge.png" alt="TryHackMe Badge" class="platform-badge">
+                    <h3 class="platform-name">TryHackMe</h3>
+                    <p class="platform-description">
+                        Rooms completados cobrindo desde básico até técnicas avançadas 
+                        de Red Team e AD exploitation.
+                    </p>
                 </div>
             </div>
         </div>
@@ -467,10 +334,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">PRECISA DE UMA API ROBUSTA?</h2>
+                <h2 class="cta-title">PRECISA DE UM PENTEST?</h2>
                 <p class="cta-description">
-                    Do MVP ao sistema enterprise, eu desenvolvo soluções backend escaláveis,<br>
-                    seguras e de alta performance que realmente funcionam.
+                    Identifique vulnerabilidades antes que hackers maliciosos façam.<br>
+                    Relatório técnico completo com recomendações práticas de correção.
                 </p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -489,7 +356,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">// VAMOS TRABALHAR JUNTOS</span>
-                <h2 class="section-title">PRONTO PARA CONSTRUIR SEU SISTEMA?</h2>
+                <h2 class="section-title">PRONTO PARA AUMENTAR SUA SEGURANÇA?</h2>
             </div>
             <div class="contact-cta">
                 <a href="https://github.com/heuro12" target="_blank" class="contact-btn">
@@ -498,7 +365,7 @@
                     </svg>
                     <span>GitHub</span>
                 </a>
-                <a href="/cdn-cgi/l/email-protection#70181505021f161b30171d11191c5e131f1d" class="contact-btn">
+                <a href="/cdn-cgi/l/email-protection#a9c1ccdcdbc6cfc2e9cec4c8c0c587cac6c4" class="contact-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
@@ -509,7 +376,7 @@
         </div>
     </section>
 
-   
+ 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -522,6 +389,7 @@
             </div>
         </div>
     </footer>
-
-   
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
