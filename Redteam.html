@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Team & Security - Heuro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <canvas id="matrix-canvas"></canvas>
+
+   
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">HEURO DEV</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="redteam.html" class="nav-link active">RED TEAM</a>
+                <a href="backend.html" class="nav-link">BACKEND</a>
+                <a href="#contact" class="nav-link nav-cta">CONTATO</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="page-tag">// OFFENSIVE SECURITY</span>
+                <h1 class="page-title">
+                    <span class="title-gradient">RED TEAM</span>
+                    <span>& PENETRATION TESTING</span>
+                </h1>
+                <p class="page-subtitle">
+                    Penso como um atacante. Defendo como um especialista.<br>
+                    Identifico vulnerabilidades antes que sejam exploradas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="methodology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// PROCESSO</span>
+                <h2 class="section-title">METODOLOGIA DE ATAQUE</h2>
+            </div>
+            <div class="methodology-grid">
+                <div class="method-card">
+                    <div class="method-number">01</div>
+                    <h3 class="method-title">RECONNAISSANCE</h3>
+                    <p class="method-description">
+                        Coleta passiva e ativa de informações sobre o alvo. 
+                        OSINT, enumeração de domínios, identificação de tecnologias e superfície de ataque.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Nmap</span>
+                        <span class="tool-badge">theHarvester</span>
+                        <span class="tool-badge">Shodan</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">02</div>
+                    <h3 class="method-title">SCANNING & ENUMERATION</h3>
+                    <p class="method-description">
+                        Varredura de portas, serviços e versões. Identificação de vulnerabilidades 
+                        conhecidas e pontos fracos na infraestrutura.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Nmap</span>
+                        <span class="tool-badge">Nessus</span>
+                        <span class="tool-badge">Nikto</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">03</div>
+                    <h3 class="method-title">VULNERABILITY ANALYSIS</h3>
+                    <p class="method-description">
+                        Análise profunda de vulnerabilidades encontradas. Priorização baseada em risco, 
+                        impacto e exploitabilidade real.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Burp Suite</span>
+                        <span class="tool-badge">OWASP ZAP</span>
+                        <span class="tool-badge">SQLMap</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">04</div>
+                    <h3 class="method-title">EXPLOITATION</h3>
+                    <p class="method-description">
+                        Exploração controlada de vulnerabilidades críticas. Demonstração de impacto real 
+                        com prova de conceito ética.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Metasploit</span>
+                        <span class="tool-badge">Custom Exploits</span>
+                        <span class="tool-badge">Social Engineering</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">05</div>
+                    <h3 class="method-title">POST-EXPLOITATION</h3>
+                    <p class="method-description">
+                        Escalação de privilégios, movimento lateral, persistência e exfiltração de dados. 
+                        Simulação realista de ataque APT.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Mimikatz</span>
+                        <span class="tool-badge">PowerShell</span>
+                        <span class="tool-badge">Pivoting</span>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">06</div>
+                    <h3 class="method-title">REPORTING</h3>
+                    <p class="method-description">
+                        Relatório técnico detalhado com todas as vulnerabilidades encontradas, 
+                        evidências de exploração e recomendações de correção priorizadas.
+                    </p>
+                    <div class="method-tools">
+                        <span class="tool-badge">Executive Summary</span>
+                        <span class="tool-badge">Technical Details</span>
+                        <span class="tool-badge">Remediation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="arsenal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// FERRAMENTAS</span>
+                <h2 class="section-title">ARSENAL DE SEGURANÇA OFENSIVA</h2>
+            </div>
+            <div class="arsenal-grid">
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="kali-terminal.png" alt="Kali Linux Terminal">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Kali Linux</h3>
+                        <p class="arsenal-description">
+                            Sistema operacional base para pentesting com centenas de ferramentas 
+                            pré-instaladas. Customizado para máxima eficiência.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="burpsuite-scan.png" alt="Burp Suite Scan">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Burp Suite Professional</h3>
+                        <p class="arsenal-description">
+                            Proxy interceptador para análise de aplicações web. Scanner automatizado 
+                            e extensões customizadas para testes avançados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="nmap-results.png" alt="Nmap Scan Results">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Nmap & Network Scanning</h3>
+                        <p class="arsenal-description">
+                            Varredura de rede profunda com scripts NSE customizados. 
+                            Descoberta de serviços, versões e configurações inseguras.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="metasploit-console.png" alt="Metasploit Console">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Metasploit Framework</h3>
+                        <p class="arsenal-description">
+                            Plataforma de exploração líder mundial. Desenvolvimento de exploits customizados 
+                            e automação de ataques complexos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="wireshark-traffic.png" alt="Wireshark Network Traffic">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Wireshark & Traffic Analysis</h3>
+                        <p class="arsenal-description">
+                            Análise profunda de tráfego de rede. Identificação de protocolos inseguros, 
+                            credenciais em texto claro e anomalias.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arsenal-card">
+                    <div class="arsenal-image">
+                        <img src="vulnerability-report.png" alt="Vulnerability Report">
+                    </div>
+                    <div class="arsenal-info">
+                        <h3 class="arsenal-title">Custom Tools & Scripts</h3>
+                        <p class="arsenal-description">
+                            Scripts Python customizados para automação de exploits, 
+                            fuzzing e testes específicos não cobertos por ferramentas comerciais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="expertise-areas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// ESPECIALIZAÇÃO</span>
+                <h2 class="section-title">ÁREAS DE EXPERTISE</h2>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Web Application Security</h3>
+                    <ul class="area-list">
+                        <li>SQL Injection & NoSQL Injection</li>
+                        <li>XSS (Reflected, Stored, DOM-based)</li>
+                        <li>CSRF & Session Management</li>
+                        <li>Authentication & Authorization Bypass</li>
+                        <li>File Upload Vulnerabilities</li>
+                        <li>API Security Testing</li>
+                    </ul>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Network Penetration Testing</h3>
+                    <ul class="area-list">
+                        <li>Network Reconnaissance & Mapping</li>
+                        <li>Port Scanning & Service Enumeration</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>Man-in-the-Middle Attacks</li>
+                        <li>Wireless Network Security</li>
+                        <li>VPN & Firewall Testing</li>
+                    </ul>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="area-title">Social Engineering</h3>
+                    <ul class="area-list">
+                        <li>Phishing Campaign Development</li>
+                        <li>Spear Phishing & Whaling</li>
+                        <li>Physical Security Testing</li>
+                        <li>Employee Awareness Assessment</li>
+                        <li>Pretexting & Vishing</li>
+                        <li>USB Drop Attacks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="platforms">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// CONTINUOUS LEARNING</span>
+                <h2 class="section-title">PLATAFORMAS & CERTIFICAÇÕES</h2>
+            </div>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <img src="htb-badge.png" alt="HackTheBox Badge" class="platform-badge">
+                    <h3 class="platform-name">HackTheBox</h3>
+                    <p class="platform-description">
+                        Prática constante em máquinas reais com vulnerabilidades atuais. 
+                        Treinamento em ambiente realista.
+                    </p>
+                </div>
+
+                <div class="platform-card">
+                    <img src="tryhackme-badge.png" alt="TryHackMe Badge" class="platform-badge">
+                    <h3 class="platform-name">TryHackMe</h3>
+                    <p class="platform-description">
+                        Rooms completados cobrindo desde básico até técnicas avançadas 
+                        de Red Team e AD exploitation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">PRECISA DE UM PENTEST?</h2>
+                <p class="cta-description">
+                    Identifique vulnerabilidades antes que hackers maliciosos façam.<br>
+                    Relatório técnico completo com recomendações práticas de correção.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>SOLICITAR ORÇAMENTO</span>
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <span>VER OUTROS SERVIÇOS</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// VAMOS TRABALHAR JUNTOS</span>
+                <h2 class="section-title">PRONTO PARA AUMENTAR SUA SEGURANÇA?</h2>
+            </div>
+            <div class="contact-cta">
+                <a href="https://github.com/heuro12" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="/cdn-cgi/l/email-protection#a1c9c4d4d3cec7cae1c6ccc0c8cd8fc2cecc" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+ 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2025 <span class="highlight">HEURO DEV</span> — Hacker Ético • Red Team • Backend Developer
+                </p>
+                <p class="footer-subtext">
+                    Transformando problemas complexos em soluções elegantes
+                </p>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c

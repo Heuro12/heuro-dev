@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heuro - Hacker Ético | Red Team | Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <canvas id="matrix-canvas"></canvas>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">HEURO DEV</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">HOME</a>
+                <a href="redteam.html" class="nav-link">RED TEAM</a>
+                <a href="backend.html" class="nav-link">BACKEND</a>
+                <a href="#contact" class="nav-link nav-cta">CONTATO</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    DISPONÍVEL PARA PROJETOS
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">HACKER ÉTICO</span>
+                    <span class="title-line title-gradient">RED TEAM</span>
+                    <span class="title-line">BACKEND DEVELOPER</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Eu não apenas codifico. Eu <span class="highlight">RESOLVO PROBLEMAS</span>.<br>
+                    Segurança ofensiva. APIs escaláveis. Soluções que funcionam.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">86%</span>
+                        <span class="stat-label">Linux Certified</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projetos Ativos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Comprometimento</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>VER PROJETOS</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>ENTRAR EM CONTATO</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-glow"></div>
+                <img src="hero-avatar.png" alt="Heuro Avatar" class="avatar-img">
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring-2"></div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    
+    <section class="expertise" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// ÁREAS DE ATUAÇÃO</span>
+                <h2 class="section-title">O QUE EU FAÇO</h2>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                            <path d="M2 17L12 22L22 17"/>
+                            <path d="M2 12L12 17L22 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">RED TEAM & PENTESTING</h3>
+                    <p class="card-description">
+                        Testes de intrusão, análise de vulnerabilidades, exploração ética de sistemas. 
+                        Penso como um atacante para defender como um especialista.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Kali Linux</span>
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Burp Suite</span>
+                        <span class="tag">Nmap</span>
+                    </div>
+                    <a href="redteam.html" class="card-link">
+                        VER DETALHES →
+                    </a>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21H16"/>
+                            <path d="M12 17V21"/>
+                            <path d="M7 7H7.01"/>
+                            <path d="M11 7H17"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">BACKEND DEVELOPMENT</h3>
+                    <p class="card-description">
+                        APIs REST robustas com FastAPI, arquitetura limpa, microsserviços escaláveis. 
+                        Código que performa e que é fácil de manter.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <a href="backend.html" class="card-link">
+                        VER DETALHES →
+                    </a>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">AUTOMAÇÃO & BOTS</h3>
+                    <p class="card-description">
+                        Bots inteligentes para Telegram e Discord, automação de tarefas repetitivas, 
+                        scraping e integração de APIs. Eficiência automatizada.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Telegram Bot</span>
+                        <span class="tag">Discord.py</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
+                    <a href="#projects" class="card-link">
+                        VER PROJETOS →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// PORTFOLIO</span>
+                <h2 class="section-title">PROJETOS QUE RESOLVEM PROBLEMAS REAIS</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-hlinks.png" alt="H-Links Project">
+                        <div class="project-overlay">
+                            <a href="https://h-links.onrender.com/" target="_blank" class="project-link">
+                                VER PROJETO
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">H-Links - URL Shortener</h3>
+                        <p class="project-description">
+                            Encurtador de URLs profissional com rastreamento de cliques, 
+                            análise de dados e painel administrativo. Clean, rápido e escalável.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-portfolio.png" alt="Portfolio Project">
+                        <div class="project-overlay">
+                            <a href="https://meu-portifolio-z5lh.onrender.com/" target="_blank" class="project-link">
+                                VER PROJETO
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Dinâmico</h3>
+                        <p class="project-description">
+                            Site pessoal responsivo com seções interativas, 
+                            animações suaves e design moderno. Primeira impressão que importa.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-loja.png" alt="E-commerce Project">
+                        <div class="project-overlay">
+                            <a href="https://loja-1-6k0m.onrender.com/" target="_blank" class="project-link">
+                                VER PROJETO
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            Loja online completa com carrinho, checkout, gerenciamento de produtos 
+                            e sistema de pagamentos. Pronto para escalar.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Payment API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-painel.png" alt="Admin Panel Project">
+                        <div class="project-overlay">
+                            <a href="https://painel-ly5m.onrender.com/login" target="_blank" class="project-link">
+                                VER PROJETO
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Admin Dashboard</h3>
+                        <p class="project-description">
+                            Painel administrativo completo com autenticação segura, 
+                            gerenciamento de usuários, relatórios e visualização de dados.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Auth System</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STACK TECNOLÓGICO</span>
+                <h2 class="section-title">FERRAMENTAS & TECNOLOGIAS</h2>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">Security & Red Team</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Kali Linux</div>
+                        <div class="skill-item">Metasploit Framework</div>
+                        <div class="skill-item">Burp Suite</div>
+                        <div class="skill-item">Nmap / Nessus</div>
+                        <div class="skill-item">Wireshark</div>
+                        <div class="skill-item">OWASP ZAP</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Python / FastAPI</div>
+                        <div class="skill-item">Flask</div>
+                        <div class="skill-item">PostgreSQL / MySQL</div>
+                        <div class="skill-item">Redis</div>
+                        <div class="skill-item">SQLAlchemy</div>
+                        <div class="skill-item">REST APIs</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">DevOps & Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">Linux Administration</div>
+                        <div class="skill-item">Nginx</div>
+                        <div class="skill-item">CI/CD</div>
+                        <div class="skill-item">Render / VPS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certification">
+        <div class="container">
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <div class="cert-info">
+                    <h3 class="cert-title">Certificação LINUX</h3>
+                    <p class="cert-subtitle">Competência Comprovada em Administração de Sistemas Linux</p>
+                    <div class="cert-stats">
+                        <div class="cert-stat">
+                            <span class="cert-label">Pontuação</span>
+                            <span class="cert-value">86%</span>
+                        </div>
+                        <div class="cert-stat">
+                            <span class="cert-label">Percentil</span>
+                            <span class="cert-value">87%</span>
+                        </div>
+                        <div class="cert-stat">
+                            <span class="cert-label">Status</span>
+                            <span class="cert-value cert-approved"> Aprovado</span>
+                        </div>
+                        <div class="cert-stat">
+                            <span class="cert-label">Ano</span>
+                            <span class="cert-value">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// VAMOS TRABALHAR JUNTOS</span>
+                <h2 class="section-title">PRONTO PARA RESOLVER SEU PROBLEMA?</h2>
+                <p class="section-description">
+                    Disponível para projetos freelance de curto e longo prazo.<br>
+                    Se você tem um desafio, eu tenho a solução.
+                </p>
+            </div>
+            <div class="contact-cta">
+                <a href="https://github.com/heuro12" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="/cdn-cgi/l/email-protection#7c1419090e131a173c1b111d1510521f1311" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2025 <span class="highlight">HEURO DEV</span> — Hacker Ético • Red Team • Backend Developer
+                </p>
+                <p class="footer-subtext">
+                    Transformando problemas complexos em soluções elegantes
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5d

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Development - Heuro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <canvas id="matrix-canvas"></canvas>
+
+  
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">HEURO DEV</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="redteam.html" class="nav-link">RED TEAM</a>
+                <a href="backend.html" class="nav-link active">BACKEND</a>
+                <a href="#contact" class="nav-link nav-cta">CONTATO</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="page-tag">// BACKEND ENGINEERING</span>
+                <h1 class="page-title">
+                    <span class="title-gradient">APIS ROBUSTAS</span>
+                    <span>& ARQUITETURA ESCALÁVEL</span>
+                </h1>
+                <p class="page-subtitle">
+                    Código limpo. Performance otimizada. Arquitetura que escala.<br>
+                    Do MVP ao sistema enterprise, eu entrego soluções que funcionam.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// TECNOLOGIAS</span>
+                <h2 class="section-title">STACK PRINCIPAL</h2>
+            </div>
+            <div class="stack-showcase">
+                <div class="stack-category">
+                    <h3 class="stack-title">Backend Frameworks</h3>
+                    <div class="stack-items">
+                        <div class="stack-item featured">
+                            <div class="stack-icon"></div>
+                            <h4>FastAPI</h4>
+                            <p>Framework moderno e rápido para APIs REST. Documentação automática, validação de dados e alta performance.</p>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon">️</div>
+                            <h4>Flask</h4>
+                            <p>Microframework flexível para aplicações web e APIs. Ideal para projetos de médio porte.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-category">
+                    <h3 class="stack-title">Databases & ORMs</h3>
+                    <div class="stack-items">
+                        <div class="stack-item">
+                            <div class="stack-icon"></div>
+                            <h4>PostgreSQL</h4>
+                            <p>Banco relacional robusto com suporte a JSON, full-text search e recursos avançados.</p>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon">️</div>
+                            <h4>SQLAlchemy</h4>
+                            <p>ORM poderoso com suporte a queries complexas, migrations e relacionamentos.</p>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon"></div>
+                            <h4>Redis</h4>
+                            <p>Cache em memória para sessões, filas de tarefas e dados temporários de alta velocidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-category">
+                    <h3 class="stack-title">DevOps & Infrastructure</h3>
+                    <div class="stack-items">
+                        <div class="stack-item">
+                            <div class="stack-icon"></div>
+                            <h4>Docker</h4>
+                            <p>Containerização para ambientes consistentes e deploy simplificado.</p>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon"></div>
+                            <h4>CI/CD</h4>
+                            <p>Pipelines automatizados para testes, build e deploy contínuo.</p>
+                        </div>
+                        <div class="stack-item">
+                            <div class="stack-icon"></div>
+                            <h4>Nginx</h4>
+                            <p>Reverse proxy e load balancer para alta disponibilidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="fastapi-showcase">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// FASTAPI IN ACTION</span>
+                <h2 class="section-title">APIS DE NÍVEL ENTERPRISE</h2>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <img src="fastapi-swagger.png" alt="FastAPI Swagger Documentation">
+                    </div>
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">Documentação Automática Interativa</h3>
+                        <p class="showcase-description">
+                            FastAPI gera automaticamente documentação Swagger UI e ReDoc. 
+                            Teste todos os endpoints diretamente no navegador com validação em tempo real.
+                        </p>
+                        <ul class="showcase-features">
+                            <li> OpenAPI Schema automático</li>
+                            <li> Validação de tipos com Pydantic</li>
+                            <li> Suporte a autenticação OAuth2</li>
+                            <li> Versionamento de API</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="showcase-card reverse">
+                    <div class="showcase-image">
+                        <img src="api-performance.png" alt="API Performance Metrics">
+                    </div>
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">Performance Excepcional</h3>
+                        <p class="showcase-description">
+                            APIs otimizadas com resposta em milissegundos. Async/await nativo, 
+                            connection pooling e caching estratégico para máxima eficiência.
+                        </p>
+                        <ul class="showcase-features">
+                            <li> Async/Await com asyncio</li>
+                            <li> Database connection pooling</li>
+                            <li> Redis caching layer</li>
+                            <li> Rate limiting & throttling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <img src="code-snippet.png" alt="Clean Code Example">
+                    </div>
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">Código Limpo & Manutenível</h3>
+                        <p class="showcase-description">
+                            Arquitetura em camadas (Controller, Service, Repository), 
+                            dependency injection, testes automatizados e type hints completos.
+                        </p>
+                        <ul class="showcase-features">
+                            <li> Clean Architecture principles</li>
+                            <li> SOLID design patterns</li>
+                            <li> 100% type coverage</li>
+                            <li> Unit & integration tests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// ARQUITETURA</span>
+                <h2 class="section-title">DESIGN DE SISTEMAS ESCALÁVEIS</h2>
+            </div>
+            <div class="architecture-content">
+                <div class="architecture-diagram">
+                    <img src="architecture-diagram.png" alt="System Architecture Diagram">
+                </div>
+                <div class="architecture-info">
+                    <h3 class="architecture-title">Arquitetura em Camadas</h3>
+                    <div class="architecture-layers">
+                        <div class="layer-card">
+                            <h4 class="layer-title">API Layer</h4>
+                            <p class="layer-description">
+                                Endpoints REST com validação de dados, autenticação JWT, 
+                                rate limiting e versionamento.
+                            </p>
+                        </div>
+                        <div class="layer-card">
+                            <h4 class="layer-title">Service Layer</h4>
+                            <p class="layer-description">
+                                Lógica de negócio isolada e testável. Orquestração de operações 
+                                complexas e integração com APIs externas.
+                            </p>
+                        </div>
+                        <div class="layer-card">
+                            <h4 class="layer-title">Repository Layer</h4>
+                            <p class="layer-description">
+                                Abstração do banco de dados. Queries otimizadas, transactions 
+                                e cache de dados frequentemente acessados.
+                            </p>
+                        </div>
+                        <div class="layer-card">
+                            <h4 class="layer-title">Database Layer</h4>
+                            <p class="layer-description">
+                                PostgreSQL com índices otimizados, particionamento de tabelas 
+                                e replicação para alta disponibilidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="devops">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// DEVOPS</span>
+                <h2 class="section-title">DEPLOY & INFRAESTRUTURA</h2>
+            </div>
+            <div class="devops-grid">
+                <div class="devops-card">
+                    <div class="devops-image">
+                        <img src="docker-containers.png" alt="Docker Containers">
+                    </div>
+                    <div class="devops-content">
+                        <h3 class="devops-title">Containerização com Docker</h3>
+                        <p class="devops-description">
+                            Multi-stage builds otimizados, docker-compose para ambientes locais 
+                            e Kubernetes-ready para produção.
+                        </p>
+                        <div class="devops-features">
+                            <span class="feature-badge">Multi-stage Builds</span>
+                            <span class="feature-badge">Docker Compose</span>
+                            <span class="feature-badge">Health Checks</span>
+                            <span class="feature-badge">Volume Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="devops-card">
+                    <div class="devops-image">
+                        <img src="database-schema.png" alt="Database Schema">
+                    </div>
+                    <div class="devops-content">
+                        <h3 class="devops-title">Database Design & Migrations</h3>
+                        <p class="devops-description">
+                            Schema normalizado, índices estratégicos, migrations versionadas com Alembic 
+                            e backup automatizado.
+                        </p>
+                        <div class="devops-features">
+                            <span class="feature-badge">Alembic Migrations</span>
+                            <span class="feature-badge">Indexing Strategy</span>
+                            <span class="feature-badge">Backup Automation</span>
+                            <span class="feature-badge">Query Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="devops-card">
+                    <div class="devops-image">
+                        <img src="postman-tests.png" alt="API Testing">
+                    </div>
+                    <div class="devops-content">
+                        <h3 class="devops-title">Testing & Quality Assurance</h3>
+                        <p class="devops-description">
+                            Testes unitários, de integração e end-to-end. Coverage reports, 
+                            CI/CD pipelines e testes de carga.
+                        </p>
+                        <div class="devops-features">
+                            <span class="feature-badge">Pytest</span>
+                            <span class="feature-badge">Integration Tests</span>
+                            <span class="feature-badge">Load Testing</span>
+                            <span class="feature-badge">CI/CD Pipeline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// SERVIÇOS</span>
+                <h2 class="section-title">O QUE EU DESENVOLVO</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">REST APIs</h3>
+                    <p class="service-description">
+                        APIs RESTful completas com autenticação, autorização, validação, 
+                        documentação interativa e versionamento.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Microservices</h3>
+                    <p class="service-description">
+                        Arquitetura de microsserviços com comunicação via REST/gRPC, 
+                        service discovery e circuit breakers.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="12" y1="18" x2="12" y2="12"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">CRUD Systems</h3>
+                    <p class="service-description">
+                        Sistemas completos de gerenciamento com autenticação, 
+                        autorização baseada em roles e auditoria de ações.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Authentication Systems</h3>
+                    <p class="service-description">
+                        Sistemas de autenticação seguros com JWT, OAuth2, 
+                        refresh tokens e proteção contra ataques comuns.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Background Jobs</h3>
+                    <p class="service-description">
+                        Processamento assíncrono de tarefas com Celery/RQ, 
+                        agendamento de jobs e monitoramento de falhas.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">API Integration</h3>
+                    <p class="service-description">
+                        Integração com APIs externas, webhooks, rate limiting 
+                        e retry logic para requisições resilientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="backend-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// PROJETOS BACKEND</span>
+                <h2 class="section-title">TRABALHOS ANTERIORES</h2>
+            </div>
+            <div class="backend-projects-list">
+                <div class="backend-project">
+                    <div class="project-number">01</div>
+                    <div class="project-details">
+                        <h3 class="project-name">Sistema de Autenticação Multi-tenant</h3>
+                        <p class="project-desc">
+                            API completa com suporte a múltiplas organizações, JWT, refresh tokens, 
+                            permissões granulares e auditoria de ações.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="backend-project">
+                    <div class="project-number">02</div>
+                    <div class="project-details">
+                        <h3 class="project-name">API de E-commerce com Payment Gateway</h3>
+                        <p class="project-desc">
+                            Plataforma completa com catálogo de produtos, carrinho, checkout, 
+                            integração com gateway de pagamento e sistema de pedidos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Stripe API</span>
+                            <span class="tech-tag">Celery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="backend-project">
+                    <div class="project-number">03</div>
+                    <div class="project-details">
+                        <h3 class="project-name">Microservice de Notificações</h3>
+                        <p class="project-desc">
+                            Serviço dedicado para envio de emails, SMS e push notifications 
+                            com fila de prioridade e retry automático.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">RabbitMQ</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">PRECISA DE UMA API ROBUSTA?</h2>
+                <p class="cta-description">
+                    Do MVP ao sistema enterprise, eu desenvolvo soluções backend escaláveis,<br>
+                    seguras e de alta performance que realmente funcionam.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>SOLICITAR ORÇAMENTO</span>
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <span>VER OUTROS SERVIÇOS</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// VAMOS TRABALHAR JUNTOS</span>
+                <h2 class="section-title">PRONTO PARA CONSTRUIR SEU SISTEMA?</h2>
+            </div>
+            <div class="contact-cta">
+                <a href="https://github.com/heuro12" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="/cdn-cgi/l/email-protection#70181505021f161b30171d11191c5e131f1d" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2025 <span class="highlight">HEURO DEV</span> — Hacker Ético • Red Team • Backend Developer
+                </p>
+                <p class="footer-subtext">
+                    Transformando problemas complexos em soluções elegantes
+                </p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5
