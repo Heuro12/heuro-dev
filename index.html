@@ -8,6 +8,280 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== SERVIÇOS ECOMMERCE ===== */
+        .ecommerce-services {
+            background: var(--bg-primary);
+        }
+
+        .ecommerce-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ecommerce-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ecommerce-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-base);
+        }
+
+        .ecommerce-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(255,0,110,0.15);
+        }
+
+        .ecommerce-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .ecommerce-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .ecommerce-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .ecommerce-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== STOREINSIGHT AI ===== */
+        .storeinsight {
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .storeinsight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,0,110,0.06), transparent 70%);
+            pointer-events: none;
+        }
+
+        .storeinsight-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .storeinsight-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 0, 110, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .storeinsight-title {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .storeinsight-title span {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .storeinsight-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .storeinsight-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .si-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.2rem;
+            background: rgba(0, 255, 157, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: var(--transition-base);
+        }
+
+        .si-feature:hover {
+            background: rgba(0, 255, 157, 0.08);
+            border-color: var(--primary);
+            transform: translateX(6px);
+        }
+
+        .si-feature-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            min-width: 24px;
+        }
+
+        .si-feature-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .storeinsight-panel {
+            background: var(--bg-tertiary);
+            border: 2px solid rgba(255, 0, 110, 0.3);
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .storeinsight-panel::before {
+            content: '// StoreInsight AI';
+            position: absolute;
+            top: -1px;
+            left: 2rem;
+            background: var(--bg-tertiary);
+            color: var(--secondary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0 0.5rem;
+            transform: translateY(-50%);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .panel-logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .panel-status {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--primary);
+            margin-left: auto;
+        }
+
+        .panel-status::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .audit-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .audit-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1rem;
+            background: rgba(0, 255, 157, 0.03);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .audit-label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .audit-score {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .score-good { color: var(--primary); background: rgba(0,255,157,0.1); }
+        .score-warn { color: #ffd700; background: rgba(255,215,0,0.1); }
+        .score-bad  { color: var(--secondary); background: rgba(255,0,110,0.1); }
+
+        .panel-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .panel-footer strong {
+            color: var(--primary);
+        }
+
+        @media (max-width: 968px) {
+            .storeinsight-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .storeinsight-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
    
@@ -49,8 +323,8 @@
                     <span class="title-line">BACKEND DEVELOPER</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Eu não apenas codifico. Eu <span class="highlight">RESOLVO PROBLEMAS</span>.<br>
-                    Segurança ofensiva. APIs escaláveis. Soluções que funcionam.
+                    Eu ajudo lojas online a <span class="highlight">AUMENTAR VENDAS</span><br>
+                    através de automação, chatbots e otimização de conversão.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -118,9 +392,7 @@
                         <span class="tag">Burp Suite</span>
                         <span class="tag">Nmap</span>
                     </div>
-                    <a href="redteam.html" class="card-link">
-                        VER DETALHES →
-                    </a>
+                    <a href="redteam.html" class="card-link">VER DETALHES →</a>
                 </div>
 
                 <div class="expertise-card">
@@ -144,9 +416,7 @@
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">Docker</span>
                     </div>
-                    <a href="backend.html" class="card-link">
-                        VER DETALHES →
-                    </a>
+                    <a href="backend.html" class="card-link">VER DETALHES →</a>
                 </div>
 
                 <div class="expertise-card">
@@ -166,9 +436,137 @@
                         <span class="tag">Discord.py</span>
                         <span class="tag">REST APIs</span>
                     </div>
-                    <a href="#projects" class="card-link">
-                        VER PROJETOS →
-                    </a>
+                    <a href="#projects" class="card-link">VER PROJETOS →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOVA SEÇÃO: SERVIÇOS E-COMMERCE ===== -->
+    <section class="ecommerce-services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// SERVIÇOS</span>
+                <h2 class="section-title">SOLUÇÕES PARA E-COMMERCE</h2>
+                <p class="section-description">
+                    Especializado em aumentar as vendas de lojas online através de tecnologia e automação inteligente.
+                </p>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">🤖</div>
+                    <h3 class="ecommerce-title">Chatbots para E-commerce</h3>
+                    <p class="ecommerce-desc">
+                        Atendimento automático 24/7, recuperação de clientes inativos e suporte inteligente 
+                        integrado à sua loja online.
+                    </p>
+                </div>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">⚡</div>
+                    <h3 class="ecommerce-title">Automação de Vendas</h3>
+                    <p class="ecommerce-desc">
+                        Fluxos automáticos de follow-up, nutrição de leads e sequências de vendas 
+                        que trabalham enquanto você dorme.
+                    </p>
+                </div>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">📊</div>
+                    <h3 class="ecommerce-title">Auditoria de Conversão</h3>
+                    <p class="ecommerce-desc">
+                        Análise técnica completa da sua loja para identificar gargalos e oportunidades 
+                        de aumento de conversão e receita.
+                    </p>
+                </div>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">💬</div>
+                    <h3 class="ecommerce-title">Integrações WhatsApp</h3>
+                    <p class="ecommerce-desc">
+                        Automações e integrações completas para WhatsApp Business — notificações, 
+                        pedidos, suporte e campanhas automatizadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOVA SEÇÃO: STOREINSIGHT AI ===== -->
+    <section class="storeinsight" id="storeinsight">
+        <div class="container">
+            <div class="storeinsight-wrapper">
+                <div class="storeinsight-info">
+                    <div class="storeinsight-badge">
+                        ⚡ FERRAMENTA EXCLUSIVA
+                    </div>
+                    <h2 class="storeinsight-title">
+                        <span>StoreInsight AI</span>
+                    </h2>
+                    <p class="storeinsight-subtitle">
+                        Ferramenta de auditoria inteligente para lojas online. 
+                        Analisa automaticamente sua loja e gera um relatório completo 
+                        com melhorias para aumentar suas vendas.
+                    </p>
+                    <div class="storeinsight-features">
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🚀</span>
+                            <span class="si-feature-text">Análise de velocidade do site</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🤖</span>
+                            <span class="si-feature-text">Avaliação de chatbot e atendimento</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🛒</span>
+                            <span class="si-feature-text">Recuperação de carrinho abandonado</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🔍</span>
+                            <span class="si-feature-text">Auditoria de SEO e visibilidade</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">⭐</span>
+                            <span class="si-feature-text">Análise de reviews e reputação</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">📈</span>
+                            <span class="si-feature-text">Pixel de conversão e rastreamento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="storeinsight-panel">
+                    <div class="panel-header">
+                        <div class="panel-logo">StoreInsight AI</div>
+                        <div class="panel-status">ANALISANDO</div>
+                    </div>
+                    <div class="audit-items">
+                        <div class="audit-item">
+                            <span class="audit-label">🚀 Velocidade do Site</span>
+                            <span class="audit-score score-warn">68/100</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">🤖 Chatbot</span>
+                            <span class="audit-score score-bad">Não detectado</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">🛒 Carrinho Abandonado</span>
+                            <span class="audit-score score-bad">Sem recuperação</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">🔍 SEO</span>
+                            <span class="audit-score score-warn">Médio</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">⭐ Reviews</span>
+                            <span class="audit-score score-good">Ativo</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">📈 Pixel Conversão</span>
+                            <span class="audit-score score-bad">Não instalado</span>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        Relatório gerado via <strong>StoreInsight AI</strong> — potencial de +35% em conversão
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,9 +584,7 @@
                     <div class="project-image">
                         <img src="project-hlinks.png" alt="H-Links Project">
                         <div class="project-overlay">
-                            <a href="https://h-links.onrender.com/" target="_blank" class="project-link">
-                                VER PROJETO
-                            </a>
+                            <a href="https://h-links.onrender.com/" target="_blank" class="project-link">VER PROJETO</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -209,9 +605,7 @@
                     <div class="project-image">
                         <img src="project-portfolio.png" alt="Portfolio Project">
                         <div class="project-overlay">
-                            <a href="https://meu-portifolio-z5lh.onrender.com/" target="_blank" class="project-link">
-                                VER PROJETO
-                            </a>
+                            <a href="https://meu-portifolio-z5lh.onrender.com/" target="_blank" class="project-link">VER PROJETO</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -232,9 +626,7 @@
                     <div class="project-image">
                         <img src="project-loja.png" alt="E-commerce Project">
                         <div class="project-overlay">
-                            <a href="https://loja-1-6k0m.onrender.com/" target="_blank" class="project-link">
-                                VER PROJETO
-                            </a>
+                            <a href="https://loja-1-6k0m.onrender.com/" target="_blank" class="project-link">VER PROJETO</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -255,9 +647,7 @@
                     <div class="project-image">
                         <img src="project-painel.png" alt="Admin Panel Project">
                         <div class="project-overlay">
-                            <a href="https://painel-ly5m.onrender.com/login" target="_blank" class="project-link">
-                                VER PROJETO
-                            </a>
+                            <a href="https://painel-ly5m.onrender.com/login" target="_blank" class="project-link">VER PROJETO</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -295,7 +685,6 @@
                         <div class="skill-item">OWASP ZAP</div>
                     </div>
                 </div>
-
                 <div class="skill-category">
                     <h3 class="category-title">Backend Development</h3>
                     <div class="skill-list">
@@ -307,7 +696,6 @@
                         <div class="skill-item">REST APIs</div>
                     </div>
                 </div>
-
                 <div class="skill-category">
                     <h3 class="category-title">DevOps & Tools</h3>
                     <div class="skill-list">
@@ -346,7 +734,7 @@
                         </div>
                         <div class="cert-stat">
                             <span class="cert-label">Status</span>
-                            <span class="cert-value cert-approved"> Aprovado</span>
+                            <span class="cert-value cert-approved">✓ Aprovado</span>
                         </div>
                         <div class="cert-stat">
                             <span class="cert-label">Ano</span>
@@ -358,7 +746,6 @@
         </div>
     </section>
 
-   
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -376,13 +763,26 @@
                     </svg>
                     <span>GitHub</span>
                 </a>
-             <div class="contact-cta">
-                <a href="https://discord.com/channels/@me/1477992252755284050" target="_blank" class="contact-btn">
+                <a href="https://t.me/HEURODEV" target="_blank" class="contact-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.26 14.4l-2.95-.924c-.64-.203-.654-.64.136-.954l11.57-4.461c.537-.194 1.006.131.547 1.186z"/>
                     </svg>
-                    <span>Discord</span>
+                    <span>Telegram</span>
                 </a>
+                <a href="https://www.facebook.com/profile.php?id=61559349458783" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span>Facebook</span>
+                </a>
+                <button class="contact-btn email-copy-btn" onclick="copyEmail(this)" title="Clique para copiar o email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span class="email-btn-text">heurofk@gmail.com</span>
+                    <span class="email-copy-label">clique para copiar</span>
+                </button>
             </div>
         </div>
     </section>
@@ -399,6 +799,926 @@
             </div>
         </div>
     </footer>
+
+    <style>
+        .email-copy-btn {
+            background: var(--bg-tertiary);
+            border: 2px solid var(--accent);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            position: relative;
+            flex-direction: column;
+            gap: 0.2rem;
+            padding: 1rem 2rem;
+        }
+        .email-copy-btn:hover {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+        .email-btn-text {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .email-copy-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+        .email-copy-btn.copied {
+            border-color: var(--primary);
+            background: rgba(0, 255, 157, 0.1);
+        }
+        .email-copy-btn.copied .email-btn-text {
+            color: var(--primary);
+        }
+        .email-copy-btn.copied .email-copy-label {
+            color: var(--primary);
+        }
+    </style>
+
+    <script>
+        function copyEmail(btn) {
+            const email = 'heurofk@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const label = btn.querySelector('.email-copy-label');
+                const text = btn.querySelector('.email-btn-text');
+                btn.classList.add('copied');
+                label.textContent = '✓ copiado!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    label.textContent = 'clique para copiar';
+                }, 2500);
+            });
+        }
+    </script>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heuro - Hacker Ético | Red Team | Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== SERVIÇOS ECOMMERCE ===== */
+        .ecommerce-services {
+            background: var(--bg-primary);
+        }
+
+        .ecommerce-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ecommerce-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ecommerce-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-base);
+        }
+
+        .ecommerce-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(255,0,110,0.15);
+        }
+
+        .ecommerce-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .ecommerce-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .ecommerce-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .ecommerce-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== STOREINSIGHT AI ===== */
+        .storeinsight {
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .storeinsight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,0,110,0.06), transparent 70%);
+            pointer-events: none;
+        }
+
+        .storeinsight-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .storeinsight-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 0, 110, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .storeinsight-title {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .storeinsight-title span {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .storeinsight-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .storeinsight-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .si-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.2rem;
+            background: rgba(0, 255, 157, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: var(--transition-base);
+        }
+
+        .si-feature:hover {
+            background: rgba(0, 255, 157, 0.08);
+            border-color: var(--primary);
+            transform: translateX(6px);
+        }
+
+        .si-feature-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            min-width: 24px;
+        }
+
+        .si-feature-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .storeinsight-panel {
+            background: var(--bg-tertiary);
+            border: 2px solid rgba(255, 0, 110, 0.3);
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .storeinsight-panel::before {
+            content: '// StoreInsight AI';
+            position: absolute;
+            top: -1px;
+            left: 2rem;
+            background: var(--bg-tertiary);
+            color: var(--secondary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0 0.5rem;
+            transform: translateY(-50%);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .panel-logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .panel-status {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--primary);
+            margin-left: auto;
+        }
+
+        .panel-status::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .audit-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .audit-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1rem;
+            background: rgba(0, 255, 157, 0.03);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .audit-label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .audit-score {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+        }
+
+        .score-good { color: var(--primary); background: rgba(0,255,157,0.1); }
+        .score-warn { color: #ffd700; background: rgba(255,215,0,0.1); }
+        .score-bad  { color: var(--secondary); background: rgba(255,0,110,0.1); }
+
+        .panel-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .panel-footer strong {
+            color: var(--primary);
+        }
+
+        @media (max-width: 968px) {
+            .storeinsight-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .storeinsight-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <canvas id="matrix-canvas"></canvas>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">HEURO DEV</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">HOME</a>
+                <a href="redteam.html" class="nav-link">RED TEAM</a>
+                <a href="backend.html" class="nav-link">BACKEND</a>
+                <a href="#contact" class="nav-link nav-cta">CONTATO</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    DISPONÍVEL PARA PROJETOS
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">HACKER ÉTICO</span>
+                    <span class="title-line title-gradient">RED TEAM</span>
+                    <span class="title-line">BACKEND DEVELOPER</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Eu ajudo lojas online a <span class="highlight">AUMENTAR VENDAS</span><br>
+                    através de automação, chatbots e otimização de conversão.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">86%</span>
+                        <span class="stat-label">Linux Certified</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projetos Ativos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Comprometimento</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>VER PROJETOS</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>ENTRAR EM CONTATO</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-glow"></div>
+                <img src="hero-avatar.png" alt="Heuro Avatar" class="avatar-img">
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring-2"></div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    
+    <section class="expertise" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// ÁREAS DE ATUAÇÃO</span>
+                <h2 class="section-title">O QUE EU FAÇO</h2>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                            <path d="M2 17L12 22L22 17"/>
+                            <path d="M2 12L12 17L22 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">RED TEAM & PENTESTING</h3>
+                    <p class="card-description">
+                        Testes de intrusão, análise de vulnerabilidades, exploração ética de sistemas. 
+                        Penso como um atacante para defender como um especialista.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Kali Linux</span>
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Burp Suite</span>
+                        <span class="tag">Nmap</span>
+                    </div>
+                    <a href="redteam.html" class="card-link">VER DETALHES →</a>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21H16"/>
+                            <path d="M12 17V21"/>
+                            <path d="M7 7H7.01"/>
+                            <path d="M11 7H17"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">BACKEND DEVELOPMENT</h3>
+                    <p class="card-description">
+                        APIs REST robustas com FastAPI, arquitetura limpa, microsserviços escaláveis. 
+                        Código que performa e que é fácil de manter.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <a href="backend.html" class="card-link">VER DETALHES →</a>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">AUTOMAÇÃO & BOTS</h3>
+                    <p class="card-description">
+                        Bots inteligentes para Telegram e Discord, automação de tarefas repetitivas, 
+                        scraping e integração de APIs. Eficiência automatizada.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Telegram Bot</span>
+                        <span class="tag">Discord.py</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
+                    <a href="#projects" class="card-link">VER PROJETOS →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOVA SEÇÃO: SERVIÇOS E-COMMERCE ===== -->
+    <section class="ecommerce-services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// SERVIÇOS</span>
+                <h2 class="section-title">SOLUÇÕES PARA E-COMMERCE</h2>
+                <p class="section-description">
+                    Especializado em aumentar as vendas de lojas online através de tecnologia e automação inteligente.
+                </p>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">🤖</div>
+                    <h3 class="ecommerce-title">Chatbots para E-commerce</h3>
+                    <p class="ecommerce-desc">
+                        Atendimento automático 24/7, recuperação de clientes inativos e suporte inteligente 
+                        integrado à sua loja online.
+                    </p>
+                </div>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">⚡</div>
+                    <h3 class="ecommerce-title">Automação de Vendas</h3>
+                    <p class="ecommerce-desc">
+                        Fluxos automáticos de follow-up, nutrição de leads e sequências de vendas 
+                        que trabalham enquanto você dorme.
+                    </p>
+                </div>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">📊</div>
+                    <h3 class="ecommerce-title">Auditoria de Conversão</h3>
+                    <p class="ecommerce-desc">
+                        Análise técnica completa da sua loja para identificar gargalos e oportunidades 
+                        de aumento de conversão e receita.
+                    </p>
+                </div>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">💬</div>
+                    <h3 class="ecommerce-title">Integrações WhatsApp</h3>
+                    <p class="ecommerce-desc">
+                        Automações e integrações completas para WhatsApp Business — notificações, 
+                        pedidos, suporte e campanhas automatizadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOVA SEÇÃO: STOREINSIGHT AI ===== -->
+    <section class="storeinsight" id="storeinsight">
+        <div class="container">
+            <div class="storeinsight-wrapper">
+                <div class="storeinsight-info">
+                    <div class="storeinsight-badge">
+                        ⚡ FERRAMENTA EXCLUSIVA
+                    </div>
+                    <h2 class="storeinsight-title">
+                        <span>StoreInsight AI</span>
+                    </h2>
+                    <p class="storeinsight-subtitle">
+                        Ferramenta de auditoria inteligente para lojas online. 
+                        Analisa automaticamente sua loja e gera um relatório completo 
+                        com melhorias para aumentar suas vendas.
+                    </p>
+                    <div class="storeinsight-features">
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🚀</span>
+                            <span class="si-feature-text">Análise de velocidade do site</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🤖</span>
+                            <span class="si-feature-text">Avaliação de chatbot e atendimento</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🛒</span>
+                            <span class="si-feature-text">Recuperação de carrinho abandonado</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">🔍</span>
+                            <span class="si-feature-text">Auditoria de SEO e visibilidade</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">⭐</span>
+                            <span class="si-feature-text">Análise de reviews e reputação</span>
+                        </div>
+                        <div class="si-feature">
+                            <span class="si-feature-icon">📈</span>
+                            <span class="si-feature-text">Pixel de conversão e rastreamento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="storeinsight-panel">
+                    <div class="panel-header">
+                        <div class="panel-logo">StoreInsight AI</div>
+                        <div class="panel-status">ANALISANDO</div>
+                    </div>
+                    <div class="audit-items">
+                        <div class="audit-item">
+                            <span class="audit-label">🚀 Velocidade do Site</span>
+                            <span class="audit-score score-warn">68/100</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">🤖 Chatbot</span>
+                            <span class="audit-score score-bad">Não detectado</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">🛒 Carrinho Abandonado</span>
+                            <span class="audit-score score-bad">Sem recuperação</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">🔍 SEO</span>
+                            <span class="audit-score score-warn">Médio</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">⭐ Reviews</span>
+                            <span class="audit-score score-good">Ativo</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">📈 Pixel Conversão</span>
+                            <span class="audit-score score-bad">Não instalado</span>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        Relatório gerado via <strong>StoreInsight AI</strong> — potencial de +35% em conversão
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// PORTFOLIO</span>
+                <h2 class="section-title">PROJETOS QUE RESOLVEM PROBLEMAS REAIS</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-hlinks.png" alt="H-Links Project">
+                        <div class="project-overlay">
+                            <a href="https://h-links.onrender.com/" target="_blank" class="project-link">VER PROJETO</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">H-Links - URL Shortener</h3>
+                        <p class="project-description">
+                            Encurtador de URLs profissional com rastreamento de cliques, 
+                            análise de dados e painel administrativo. Clean, rápido e escalável.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-portfolio.png" alt="Portfolio Project">
+                        <div class="project-overlay">
+                            <a href="https://meu-portifolio-z5lh.onrender.com/" target="_blank" class="project-link">VER PROJETO</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Dinâmico</h3>
+                        <p class="project-description">
+                            Site pessoal responsivo com seções interativas, 
+                            animações suaves e design moderno. Primeira impressão que importa.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-loja.png" alt="E-commerce Project">
+                        <div class="project-overlay">
+                            <a href="https://loja-1-6k0m.onrender.com/" target="_blank" class="project-link">VER PROJETO</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            Loja online completa com carrinho, checkout, gerenciamento de produtos 
+                            e sistema de pagamentos. Pronto para escalar.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Payment API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-painel.png" alt="Admin Panel Project">
+                        <div class="project-overlay">
+                            <a href="https://painel-ly5m.onrender.com/login" target="_blank" class="project-link">VER PROJETO</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Admin Dashboard</h3>
+                        <p class="project-description">
+                            Painel administrativo completo com autenticação segura, 
+                            gerenciamento de usuários, relatórios e visualização de dados.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Auth System</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STACK TECNOLÓGICO</span>
+                <h2 class="section-title">FERRAMENTAS & TECNOLOGIAS</h2>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">Security & Red Team</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Kali Linux</div>
+                        <div class="skill-item">Metasploit Framework</div>
+                        <div class="skill-item">Burp Suite</div>
+                        <div class="skill-item">Nmap / Nessus</div>
+                        <div class="skill-item">Wireshark</div>
+                        <div class="skill-item">OWASP ZAP</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Python / FastAPI</div>
+                        <div class="skill-item">Flask</div>
+                        <div class="skill-item">PostgreSQL / MySQL</div>
+                        <div class="skill-item">Redis</div>
+                        <div class="skill-item">SQLAlchemy</div>
+                        <div class="skill-item">REST APIs</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">DevOps & Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">Linux Administration</div>
+                        <div class="skill-item">Nginx</div>
+                        <div class="skill-item">CI/CD</div>
+                        <div class="skill-item">Render / VPS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certification">
+        <div class="container">
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <div class="cert-info">
+                    <h3 class="cert-title">Certificação LINUX</h3>
+                    <p class="cert-subtitle">Competência Comprovada em Administração de Sistemas Linux</p>
+                    <div class="cert-stats">
+                        <div class="cert-stat">
+                            <span class="cert-label">Pontuação</span>
+                            <span class="cert-value">86%</span>
+                        </div>
+                        <div class="cert-stat">
+                            <span class="cert-label">Percentil</span>
+                            <span class="cert-value">87%</span>
+                        </div>
+                        <div class="cert-stat">
+                            <span class="cert-label">Status</span>
+                            <span class="cert-value cert-approved">✓ Aprovado</span>
+                        </div>
+                        <div class="cert-stat">
+                            <span class="cert-label">Ano</span>
+                            <span class="cert-value">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// VAMOS TRABALHAR JUNTOS</span>
+                <h2 class="section-title">PRONTO PARA RESOLVER SEU PROBLEMA?</h2>
+                <p class="section-description">
+                    Disponível para projetos freelance de curto e longo prazo.<br>
+                    Se você tem um desafio, eu tenho a solução.
+                </p>
+            </div>
+            <div class="contact-cta">
+                <a href="https://github.com/heuro12" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://t.me/HEURODEV" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.26 14.4l-2.95-.924c-.64-.203-.654-.64.136-.954l11.57-4.461c.537-.194 1.006.131.547 1.186z"/>
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61559349458783" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span>Facebook</span>
+                </a>
+                <button class="contact-btn email-copy-btn" onclick="copyEmail(this)" title="Clique para copiar o email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span class="email-btn-text">heurofk@gmail.com</span>
+                    <span class="email-copy-label">clique para copiar</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2025 <span class="highlight">HEURO DEV</span> — Hacker Ético • Red Team • Backend Developer
+                </p>
+                <p class="footer-subtext">
+                    Transformando problemas complexos em soluções elegantes
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .email-copy-btn {
+            background: var(--bg-tertiary);
+            border: 2px solid var(--accent);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            position: relative;
+            flex-direction: column;
+            gap: 0.2rem;
+            padding: 1rem 2rem;
+        }
+        .email-copy-btn:hover {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+        .email-btn-text {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .email-copy-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+        .email-copy-btn.copied {
+            border-color: var(--primary);
+            background: rgba(0, 255, 157, 0.1);
+        }
+        .email-copy-btn.copied .email-btn-text {
+            color: var(--primary);
+        }
+        .email-copy-btn.copied .email-copy-label {
+            color: var(--primary);
+        }
+    </style>
+
+    <script>
+        function copyEmail(btn) {
+            const email = 'heurofk@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const label = btn.querySelector('.email-copy-label');
+                const text = btn.querySelector('.email-btn-text');
+                btn.classList.add('copied');
+                label.textContent = '✓ copiado!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    label.textContent = 'clique para copiar';
+                }, 2500);
+            });
+        }
+    </script>
+
     <script src="security.js"></script>
     <script src="script.js"></script>
 </body>
